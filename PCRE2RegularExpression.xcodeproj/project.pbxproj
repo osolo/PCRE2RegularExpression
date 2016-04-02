@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		651AE04B1CB0788D00313983 /* PCRE2RegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 651AE04A1CB0788D00313983 /* PCRE2RegularExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		651AE0521CB0788D00313983 /* PCRE2RegularExpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651AE0471CB0788D00313983 /* PCRE2RegularExpression.framework */; };
 		651AE0571CB0788D00313983 /* PCRE2RegularExpressionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651AE0561CB0788D00313983 /* PCRE2RegularExpressionTests.m */; };
+		651AE0631CB0790400313983 /* PCRE2RegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 651AE0611CB0790400313983 /* PCRE2RegularExpression.h */; };
+		651AE0641CB0790400313983 /* PCRE2RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 651AE0621CB0790400313983 /* PCRE2RegularExpression.m */; };
+		651AE0681CB0796600313983 /* libpcre2-16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 651AE0671CB0796600313983 /* libpcre2-16.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,10 @@
 		651AE0511CB0788D00313983 /* PCRE2RegularExpressionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCRE2RegularExpressionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		651AE0561CB0788D00313983 /* PCRE2RegularExpressionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCRE2RegularExpressionTests.m; sourceTree = "<group>"; };
 		651AE0581CB0788D00313983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		651AE0611CB0790400313983 /* PCRE2RegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCRE2RegularExpression.h; sourceTree = SOURCE_ROOT; };
+		651AE0621CB0790400313983 /* PCRE2RegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCRE2RegularExpression.m; sourceTree = SOURCE_ROOT; };
+		651AE0651CB0794000313983 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		651AE0671CB0796600313983 /* libpcre2-16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libpcre2-16.a"; path = "../../../../../usr/local/Cellar/pcre2/10.20/lib/libpcre2-16.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651AE0681CB0796600313983 /* libpcre2-16.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,7 @@
 		651AE03D1CB0788D00313983 = {
 			isa = PBXGroup;
 			children = (
+				651AE0671CB0796600313983 /* libpcre2-16.a */,
 				651AE0491CB0788D00313983 /* PCRE2RegularExpression */,
 				651AE0551CB0788D00313983 /* PCRE2RegularExpressionTests */,
 				651AE0481CB0788D00313983 /* Products */,
@@ -71,6 +80,9 @@
 		651AE0491CB0788D00313983 /* PCRE2RegularExpression */ = {
 			isa = PBXGroup;
 			children = (
+				651AE0651CB0794000313983 /* README.md */,
+				651AE0611CB0790400313983 /* PCRE2RegularExpression.h */,
+				651AE0621CB0790400313983 /* PCRE2RegularExpression.m */,
 				651AE04A1CB0788D00313983 /* PCRE2RegularExpression.h */,
 				651AE04C1CB0788D00313983 /* Info.plist */,
 			);
@@ -93,6 +105,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651AE0631CB0790400313983 /* PCRE2RegularExpression.h in Headers */,
 				651AE04B1CB0788D00313983 /* PCRE2RegularExpression.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +167,7 @@
 				};
 			};
 			buildConfigurationList = 651AE0411CB0788D00313983 /* Build configuration list for PBXProject "PCRE2RegularExpression" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -193,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651AE0641CB0790400313983 /* PCRE2RegularExpression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/pcre2/10.20/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,6 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/pcre2/10.20/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -314,6 +330,10 @@
 				INFOPLIST_FILE = PCRE2RegularExpression/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/pcre2/10.20/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sgstudios.PCRE2RegularExpression;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -332,6 +352,10 @@
 				INFOPLIST_FILE = PCRE2RegularExpression/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/pcre2/10.20/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sgstudios.PCRE2RegularExpression;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
