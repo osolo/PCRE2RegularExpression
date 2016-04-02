@@ -18,12 +18,12 @@ Use *PCRE2RegularExpression* just like you would *NSRegularExpression*:
 ```objc
 PCRE2RegularExpression *re;
 re = [PCRE2RegularExpression regularExpressionWithPattern:@"foo"
-options:NSRegularExpressionCaseInsensitive 
-error:&error];
+                                                  options:NSRegularExpressionCaseInsensitive 
+                                                    error:&error];
 [re enumerateMatchesInString:myString 
-options:NSRegularExpressionCaseInsensitive 
-range:myRange
-usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+                     options:NSRegularExpressionCaseInsensitive 
+                       range:myRange
+                  usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
 // ...
 }];
 ```
@@ -33,8 +33,8 @@ Harness the power of PCRE2 features like named capture groups:
 NSString *pat = @"(a)(?P<mygroup>b+)(c)";
 PCRE2RegularExpression *re;
 re = [PCRE2RegularExpression regularExpressionWithPattern:pat 
-options:NSRegularExpressionCaseInsensitive 
-error:&error];
+                                                  options:NSRegularExpressionCaseInsensitive 
+                                                    error:&error];
 NSString *s = @"abbbc";
 NSArray<NSTextCheckingResult *> *res = [re matchesInString:s options:0 range:NSMakeRange(0, s.length)];
 NSRange rangeOf_bbb = [re rangeOfNamedCapture:@"mygroup" inTextCheckingResult:res[0]];
